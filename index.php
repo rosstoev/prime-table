@@ -44,7 +44,7 @@ function render()
 
     foreach ($table as $row) {
         foreach ($row as $column) {
-            echo str_pad($column,$maxNumberLength + 1);
+            echo str_pad($column, $maxNumberLength + 1);
         }
         echo "\n";
     }
