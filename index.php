@@ -1,10 +1,12 @@
 <?php
 
-require_once __DIR__ . '/Creator/PrimeNumberTableCreator.php';
+use src\Creator\PrimeNumberTableCreator;
+
+require_once __DIR__ . '/src/Creator/PrimeNumberTableCreator.php';
 function render(): void
 {
     $input = readline('Enter range[10]: ');
-    $primeNumberTableCreator = new Creator\PrimeNumberTableCreator($input);
+    $primeNumberTableCreator = new PrimeNumberTableCreator($input);
 
     try {
         $output = $primeNumberTableCreator->create();

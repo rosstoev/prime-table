@@ -1,8 +1,6 @@
 <?php
 
-namespace Creator;
-
-use Exception;
+namespace src\Creator;
 
 class PrimeNumberTableCreator
 {
@@ -18,7 +16,7 @@ class PrimeNumberTableCreator
     public function create(): string
     {
         if ($this->input == 0) {
-            throw new Exception('Can not be created a table with zero or invalid number input!');
+            throw new \InvalidArgumentException('Can not be created a table with zero or invalid number input!');
         }
 
         $table = $this->getPrimeNumbersInRange($this->input);
