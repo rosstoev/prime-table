@@ -28,8 +28,8 @@ class PrimeNumberTableCreator
             $output .= str_pad($primeNumber, $maxNumberLength + 1);
         }
         $output .= "\n";
-        for ($x = 0; $x < $this->input; $x++) {
-            $primeNumber = $table[0][$x + 1];
+        for ($row = 0; $row < $this->input; $row++) {
+            $primeNumber = $table[0][$row + 1];
             $output .= str_pad($primeNumber, $maxNumberLength + 1);
 
             foreach ($table[0] as $initialNumber) {
